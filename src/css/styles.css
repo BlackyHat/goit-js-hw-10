@@ -18,3 +18,62 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country__info {
+  margin-left: 24px;
+}
+
+.country__flag,
+.country__info-flag {
+  width: 72px;
+  height: 42px;
+}
+
+.country__info-title {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.country__info-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.country__label {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.country__info-label {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.country__info-meta {
+  font-size: 28px;
+  /* font-weight: 400; */
+  letter-spacing: 0.02em;
+  margin: 8px 0;
+}
+
+.country-list__item {
+  display: flex;
+  gap: 18px;
+  margin: 8px;
+}
+
+.country__info-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.country-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 12px;
+}
