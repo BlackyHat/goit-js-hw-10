@@ -59,17 +59,20 @@ class Country {
   }
 
   getError() {
-    this.elCountriesList.innerHTML = '';
-    this.elInfoCountryCard.innerHTML = '';
+    this.clearFindedList.bind(this)();
     return Notify.failure('Oops, there is no country with that name');
   }
 
   checkAnswerArrLength(arr) {
+    this.clearFindedList.bind(this)();
+
     if (arr.length) {
       if (arr.length <= 10 && arr.length >= 2) {
         return this.markupCountriesList.bind(this)(arr);
       }
+
       if (arr.length > 10) {
+        this.clearFindedList.bind(this)();
         return Notify.info(
           'Too many matches found. Please enter more specific name.'
         );
@@ -77,6 +80,11 @@ class Country {
       return this.markupCountryInfo.bind(this)(arr);
     }
     return error;
+  }
+
+  clearFindedList() {
+    this.elCountriesList.innerHTML = '';
+    this.elInfoCountryCard.innerHTML = '';
   }
 
   find(e) {

@@ -20,8 +20,7 @@ function find(e) {
 }
 
 function getError() {
-  refs.elCountriesList.innerHTML = '';
-  refs.elInfoCountryCard.innerHTML = '';
+  clearFindedList();
   return Notify.failure('Oops, there is no country with that name');
 }
 
@@ -85,4 +84,9 @@ function markupCountriesList(countries) {
     .join('');
   refs.elInfoCountryCard.innerHTML = '';
   refs.elCountriesList.innerHTML = markup;
+}
+
+function clearFindedList() {
+  refs.elCountriesList.innerHTML = '';
+  refs.elInfoCountryCard.innerHTML = '';
 }
